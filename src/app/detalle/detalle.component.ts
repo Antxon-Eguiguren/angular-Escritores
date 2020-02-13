@@ -24,12 +24,7 @@ export class DetalleComponent implements OnInit {
   }
 
   manejarToogle() {
-    if (this.mostrar) {
-      this.mostrar = !this.mostrar;
-    } else {
-      this.mostrar = !this.mostrar;
-    }
-    return this.mostrar;
+    return this.mostrar = !this.mostrar;
   }
 
 }
