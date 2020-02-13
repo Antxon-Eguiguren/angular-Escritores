@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;" *ngFor="let escritor of arrEscritores">
+    <img src={{escritor.imagen}} class="card-img-top img-fluid" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Nombre: {{escritor.nombre}}</h5>
+        <h5 class="card-title">Apellidos: {{escritor.apellidos}}</h5>
+        <p class="card-text">País: {{escritor.pais}}</p>
+        <p class="card-text">Id: {{escritor.id}}</p>
+    </div>
+</div>
