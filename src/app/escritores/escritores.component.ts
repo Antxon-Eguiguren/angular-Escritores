@@ -19,4 +19,12 @@ export class EscritoresComponent implements OnInit {
     this.arrEscritores = await this.escritoresService.getAll();
   }
 
+  async manejarFiltroPais($event) {
+    if ($event.target.value === 'todos') {
+      this.arrEscritores = await this.escritoresService.getAll();
+    } else {
+      this.arrEscritores = await this.escritoresService.getByPais($event.target.value);
+    }
+  }
+
 }

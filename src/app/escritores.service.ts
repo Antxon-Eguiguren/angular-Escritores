@@ -11,10 +11,27 @@ export class EscritoresService {
   }
 
   getAll(): Promise<Escritor[]> {
-    const prom = new Promise<Escritor[]>((resolve, reject) => {
+    return new Promise<Escritor[]>((resolve, reject) => {
       resolve(ESCRITORES);
       reject('Error');
     });
-    return prom;
+  }
+
+  getByPais(pPais: string): Promise<Escritor[]> {
+    return new Promise<Escritor[]>((resolve, reject) => {
+      resolve(ESCRITORES.filter(escritor => {
+        return escritor.pais === pPais;
+      }));
+      reject('Error');
+    });
+  }
+
+  getById(pId: number): Promise<Escritor> {
+    return new Promise<Escritor>((resolve, reject) => {
+      resolve(ESCRITORES.find(escritor => {
+        return escritor.id === pId;
+      }));
+      reject('Error');
+    });
   }
 }

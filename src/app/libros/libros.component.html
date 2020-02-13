@@ -1,0 +1,7 @@
+<div class="card" style="width: 18rem;" *ngFor="let libro of arrLibros">
+    <img [src]="libro.imagen" class="card-img-top img-fluid" alt="...">
+    <div class="card-body">
+        <h3 class="card-title">Titulo: {{libro.titulo}}</h3>
+        <h3 class="card-title">Publicado: {{libro.publicado}}</h3>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="card" style="width: 18rem;">
+    <img [src]="escritor?.imagen" class="card-img-top img-fluid" alt="...">
+    <div class="card-body">
+        <h3 class="card-title">Nombre: {{escritor?.nombre}}</h3>
+        <h3 class="card-title">Apellidos: {{escritor?.apellidos}}</h3>
+        <p class="card-text">País: {{escritor?.pais}}</p>
+        <p class="card-text">Id: {{escritor?.id}}</p>
+    </div>
+</div>
+
+<div [ngSwitch]="mostrar">
+    <button (click)="manejarToogle()" *ngSwitchCase="true" [routerLink]="['/escritores', escritor.id, 'libros']">Mostrar
+        Libros</button>
+    <button (click)="manejarToogle()" *ngSwitchCase="false" [routerLink]="['/escritores', escritor.id]">Ocultar
+        Libros</button>
+</div>
+
+<div>
+    <button [routerLink]="['/escritores']">Volver</button>
+</div>
+
+<router-outlet></router-outlet>
