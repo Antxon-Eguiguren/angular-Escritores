@@ -9,10 +9,10 @@ export class LibrosService {
 
   constructor() { }
 
-  getById(pId: number): Promise<Libro[]> {
+  getById(pIdEscritor: number): Promise<Libro[]> {
     return new Promise<Libro[]>((resolve, reject) => {
       resolve(LIBROS.filter(libro => {
-        return libro.escritor === pId;
+        return libro.escritor === pIdEscritor;
       }));
       reject('Error');
     });
