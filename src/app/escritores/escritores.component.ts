@@ -20,11 +20,15 @@ export class EscritoresComponent implements OnInit {
   }
 
   async manejarFiltroPais($event) {
-    if ($event.target.value === 'todos') {
+    if ($event.target.value === 'todos' || $event.target.value === '') {
       this.arrEscritores = await this.escritoresService.getAll();
     } else {
       this.arrEscritores = await this.escritoresService.getByPais($event.target.value);
     }
+  }
+
+  async manejarFiltroNombre($event) {
+    this.arrEscritores = await this.escritoresService.getByName($event.target.value);
   }
 
 }

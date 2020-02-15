@@ -34,4 +34,25 @@ export class EscritoresService {
       reject('Error');
     });
   }
+
+  getByName(pString: string): Promise<Escritor[]> {
+    const prom = new Promise<Escritor[]>((resolve, reject) => {
+      resolve(ESCRITORES.filter(escritor => {
+        const nombreCompleto = this.eliminarDiacriticos(this.eliminarEspacios(escritor.nombre + escritor.apellidos));
+        const pStringNew = this.eliminarDiacriticos(this.eliminarEspacios(pString));
+        return nombreCompleto.toLowerCase().includes(pStringNew.toLowerCase());
+      }));
+      reject('Error');
+    });
+    return prom;
+  }
+
+  eliminarEspacios(pCadena: string): string {
+    const regex = / /g;
+    return pCadena.replace(regex, '');
+  }
+
+  eliminarDiacriticos(texto): string {
+    return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
 }

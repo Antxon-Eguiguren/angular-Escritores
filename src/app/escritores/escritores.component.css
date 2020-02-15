@@ -1,4 +1,35 @@
+.wrapper {
+    background-color: #ccc;
+}
+
+.container {
+    padding-bottom: 30px;
+}
+
 .card {
     cursor: pointer;
-    border: 1px solid #ccc;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.card:hover {
+    outline: 3px solid yellow;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 20px 30px;
+    color: tomato;
+}
+
+.filtros {
+    margin-bottom: 20px;
+}
+
+.nombre {
+    margin-top: 10px;
+}
+
+.card-title {
+    color: tomato;
 }
