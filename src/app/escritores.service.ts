@@ -52,7 +52,7 @@ export class EscritoresService {
     return pCadena.replace(regex, '');
   }
 
-  eliminarDiacriticos(texto): string {
+  eliminarDiacriticos(texto: string): string {
     return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
 }
