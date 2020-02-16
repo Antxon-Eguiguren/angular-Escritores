@@ -12,5 +12,4 @@ export class Escritor {
         this.imagen = pImagen;
         this.pais = pPais;
     }
-
 }
