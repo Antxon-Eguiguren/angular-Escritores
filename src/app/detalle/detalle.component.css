@@ -1,0 +1,22 @@
+.wrapper {
+    background-color: #ccc;
+}
+
+.container {
+    padding-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 20px 30px;
+    color: tomato;
+}
+
+.card-title {
+    color: tomato;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,11 @@
+.card-title {
+    font-weight: bold;
+}
+
+.card-body {
+    padding-bottom: 0px;
+}
+
+.card {
+    margin: 30px;
+}

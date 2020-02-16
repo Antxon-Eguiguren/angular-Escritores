@@ -24,8 +24,8 @@
         </div>
 
         <div class="row shadow p-3 mb-5 bg-white rounded">
-            <div class="escritores card bg-light mb-3" style="width: 14rem;" *ngFor="let escritor of arrEscritores"
-                [routerLink]="['/escritores', escritor.id]">
+            <div class="escritores card bg-light mb-3 shadow p-3 mb-5 bg-white rounded" style="width: 14rem;"
+                *ngFor="let escritor of arrEscritores" [routerLink]="['/escritores', escritor.id]">
                 <img [src]="escritor.imagen" class="card-img-top" width="150px" height="300px">
                 <div class="card-body">
                     <h5 class="card-title">{{escritor.nombre}}</h5>
